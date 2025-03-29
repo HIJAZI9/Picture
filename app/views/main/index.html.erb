@@ -1,3 +1,17 @@
 <!--This is the main welcome page of the Pictrs application.-->
-<h1>willkommen Seite </h1>
-<p>test test test test test test</p>
+
+<h1>Upload an Image</h1>
+
+<%= form_for @user, url: upload_image_path, html: { multipart: true } do |f| %>
+  <!-- Label for selecting an image to upload -->
+  <%= f.label :image, "Select an image to upload" %>
+  <!-- File input to upload the image -->
+  <%= f.file_field :image %>
+  <!-- Submit button -->
+  <%= f.submit "Upload Image" %>
+<% end %>
+
+
+
+
+

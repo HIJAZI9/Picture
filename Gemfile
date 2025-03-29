@@ -16,6 +16,12 @@ gem "turbo-rails"
 gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
+#to manage file uploads
+gem 'carrierwave', '~> 2.0'
+
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
+gem 'propshaft'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"

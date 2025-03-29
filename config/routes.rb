@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
-  get "main/index"
-  root 'main#index' # This will be the landing page of the app when it is first accessed.
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
+  # Root URL , default homepage
+  root 'main#index'
+  resources :users, only: [:destroy]
+  # POST request to upload an image
+  post 'upload', to: 'main#create', as: 'upload_image'
+  # GET request to show an uploaded image by ID
+  get 'uploaded_image/:id', to: 'main#show', as: 'show_uploaded_image'
+  # DELETE request to delete a user's image by ID
+  delete '/users/:id/delete_image', to: 'users#delete_image', as: 'delete_image_user'
 
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest

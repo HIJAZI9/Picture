@@ -1,0 +1,14 @@
+<h1>Your Uploaded Image</h1>
+
+<% if @user.image.present? %>
+  <p>Here is your uploaded image:</p>
+  <!-- Display the image -->
+  <%= image_tag @user.image.url, alt: "Uploaded Image", width: "50%", height: "50%" %>
+
+  <!-- Button to delete the image and redirect to root_path -->
+  <%= form_with url: user_path(@user), method: :delete do %>
+    <%= button_to "Upload Another Image", delete_image_user_path(@user), method: :delete %>
+  <% end %>
+<% else %>
+  <p>No image uploaded yet.</p>
+<% end %>
