@@ -18,9 +18,14 @@ gem "stimulus-rails"
 gem "jbuilder"
 #to manage file uploads
 gem 'carrierwave', '~> 2.0'
-
+# for image manipulation in CarrierWave
 gem 'mini_magick'
+#for Image Processing
+gem 'rmagick'
 gem 'image_processing', '~> 1.2'
+gem 'image_optim'
+
+#
 gem 'propshaft'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]

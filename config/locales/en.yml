@@ -23,9 +23,14 @@
 # booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
 # must be quoted to be interpreted as strings. For example:
 #
-#     en:
-#       "yes": yup
-#       enabled: "ON"
+  en:
+    carrierwave:
+      errors:
+        messages:
+          record_invalid: "There was an error with your submission."
+          size_limit: "The uploaded file is too large. Maximum size allowed is %{size}."
+          extension_whitelist_error: "You are not allowed to upload %{extension} files. Allowed types are: %{allowed_types}."
+      flash:
+      upload_success: "Your image was successfully uploaded."
+      upload_failure: "There was a problem with uploading the image."
 
-en:
-  hello: "Hello world"
