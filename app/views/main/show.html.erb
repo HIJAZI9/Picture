@@ -4,7 +4,8 @@
   <p>Here is your uploaded image:</p>
 
   <!-- Display the resized_image version -->
-  <div><%= image_tag @user.image.url(:resized_image), alt: "Display resized image" %></div>
+  <div><%= image_tag @user.image.url(:thumb), alt: "Display resized image" %></div>
+  <div><%= image_tag @user.image.url(:black_and_white), alt: "Black and White Image" %></div>
 
   <!-- Button to delete the image and redirect to root_path -->
   <%= form_with url: user_path(@user), method: :delete do %>
