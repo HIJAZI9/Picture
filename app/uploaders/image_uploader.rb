@@ -17,7 +17,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # black and white version
    version :black_and_white do
      process :convert_to_black_and_white
-     process resize_to_limit: [300, 300]  # Resize to a limit of 800x800 (or any size you want)
+     process resize_to_limit: [300, 300]  # Resize to a limit
    end
 
   # method to convert image to black and white version
@@ -53,7 +53,6 @@ class ImageUploader < CarrierWave::Uploader::Base
    end
 
   # Add an allowlist of extensions which are allowed to be uploaded.
-  # For images you might use something like this:
    def extension_allowlist
      %w(jpg jpeg gif png)
    end

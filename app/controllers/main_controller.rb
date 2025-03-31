@@ -7,7 +7,7 @@ class MainController < ApplicationController
 
     # Check if an image was selected
     unless params[:user] && params[:user][:image].present?
-      flash[:alert] = "Please choose an image first."
+      flash[:alert] = "Please choose an (jpg,jpeg,gif or png) image first."
       redirect_to root_path and return
     end
 

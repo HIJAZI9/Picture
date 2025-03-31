@@ -1,10 +1,10 @@
-<!--This is the main welcome page of the Pictrs application.-->
+<!--This is the main welcome page of our Picture application.-->
 
 <h1>Upload an Image</h1>
 
 <%= form_for @user, url: upload_image_path, html: { multipart: true, data: { turbo: "true" } } do |f| %>
   <!-- Label for selecting an image to upload -->
-  <%= f.label :image, "Select an image to upload" %>
+  <%= f.label :image, "Select an image to upload.(JPG, JPEG, GIF, or PNG only and less than 20.megabyte)" %>
   <!-- File input to upload the image -->
   <%= f.file_field :image %>
   <!-- Submit button -->
