@@ -23,11 +23,35 @@ class ImageUploader < CarrierWave::Uploader::Base
   # method to convert image to black and white version
    def convert_to_black_and_white
      manipulate! do |img|
-       Rails.logger.info("Converting image to black and white...")
+       Rails.logger.info("Converting image to black and white.")
        img.colorspace('Gray')  # Convert the image to grayscale
        img
      end
    end
+
+   def generate_histogram_data
+     Rails.logger.info("Generating histogram data.")
+
+     manipulate! do |img|
+       # Convert the image to grayscale before generating the histogram
+       img.colorspace('Gray')
+
+       # Get pixel data
+       pixel_data = img.get_pixels.flatten  # Flatten to get all pixel intensities in one array
+
+       # Count the occurrences of each intensity level (0-255)
+       histogram_data = Array.new(256, 0)
+       pixel_data.each do |pixel|
+         histogram_data[pixel] += 1
+       end
+
+       Rails.logger.info("Histogram data generated.")
+
+       # Return the histogram data
+       return histogram_data
+     end
+   end
+
   # Add an allowlist of extensions which are allowed to be uploaded.
   # For images you might use something like this:
    def extension_allowlist

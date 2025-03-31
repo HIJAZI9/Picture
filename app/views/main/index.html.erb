@@ -9,6 +9,10 @@
   <%= f.file_field :image %>
   <!-- Submit button -->
   <%= f.submit "Upload Image" %>
+  <!-- Rendering Flash Messages -->
+  <% flash.each do |type, message| %>
+    <div class="flash <%= type %>"><%= message %></div>
+  <% end %>
 <% end %>
 
 
