@@ -78,3 +78,5 @@ In this Page you will be able to Select just an image to upload. The Uploaded Im
 <div style="display: flex; justify-content: space-between; align-items: center;">
 <img width="1239" alt="Upload_again_button" src="https://github.com/user-attachments/assets/97fa5a46-2d12-4f97-ad7e-90ed2d8fffbf" />
 </div>
+
+In the docs folder, you will find some photos that you can use for testing.
