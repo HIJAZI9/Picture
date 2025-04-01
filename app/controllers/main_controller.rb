@@ -26,8 +26,14 @@ class MainController < ApplicationController
 
   def show
     @user = User.find(params[:id])  # Find the user by ID to display the uploaded image
+
+    # Check if the user has an uploaded image
     if @user.image.present?
+      # Generate histogram data from the user's image
       @histogram_data = @user.image.generate_histogram_data
+
+      # Generate scatter plot data from the user's image
+      @scatter_data = @user.image.generate_rgb_scatter_data
     end
   end
 

@@ -26,9 +26,12 @@
     <!-- This links to application.css -->
     <%= stylesheet_link_tag 'application.css', "data-turbo-track": "reload" %>
 
+    <!-- importing JavaScript files -->
     <%= javascript_importmap_tags %>
     <%= javascript_import_module_tag "custom/chartshow" %>
     <%= javascript_import_module_tag "custom/home_page" %>
+    <%= javascript_import_module_tag "custom/charts/histogramChart" %>
+    <%= javascript_import_module_tag "custom/charts/rgbScatterPlot" %>
 
   </head>
 

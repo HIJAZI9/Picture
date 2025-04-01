@@ -1,9 +1,10 @@
+/* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,400,700");
 /*Start  CSS for Home Page */
 
 #welcome-page {
-    width: 100vw;
-    height: 100vh;
+    width: 100vw;                                                           /* Full width of the viewport */
+    height: 100vh;                                                          /* Full height of the viewport */
     background-image: linear-gradient(to top, #66CDAA, #ADD8E6);
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,14 +40,14 @@
 
     &:active {
         cursor: move;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);         /* Darker shadow on click */
     }
 
     .content {
         margin: auto;
     }
 }
-
+/* Styling for headings and text */
 h1, h2, a, p {
     color: black;
     font-weight: 100;
@@ -58,9 +59,9 @@ h1, h2, a, p {
 }
 
 h2 {
-    font-size: 14px;
+    font-size: 14px;                /* Small font size for subheadings */
 }
-
+/* Submit Button and  File field styling */
 .submit,.form-field{
     padding: 10px 20px;
     font-size: 1em;
@@ -72,7 +73,7 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
-
+/* Hover effect for Submit button and File input field */
 .submit:hover,.form-field:hover {
     background-color: #66CDAA
 }

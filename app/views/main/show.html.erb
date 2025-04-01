@@ -17,6 +17,16 @@
     <div style="height: 50%; width: 50%;"><canvas id="histogramChart" data-histogram="<%=  @histogram_data.to_json %>"></canvas>
     </div>
     <hr class="line">
+    <!-- Display the Scatter diagram of color values  (colored version)-->
+    <h2 class="sen_parent_2">Scatter diagram of color values</h2>
+    <div style="height: 100%; width: 50%;">
+      <canvas id="rgbScatterPlot"
+              data-red="<%= @scatter_data[:red].to_json if @scatter_data.present? %>"
+              data-green="<%= @scatter_data[:green].to_json if @scatter_data.present? %>"
+              data-blue="<%= @scatter_data[:blue].to_json if @scatter_data.present? %>">
+      </canvas>
+    </div>
+    <hr class="line">
     <!-- Button to delete the image and redirect to root_path -->
     <%= form_with url: user_path(@user), method: :delete do |f| %>
       <%= f.submit "Upload Another Image", data: { confirm: "Are you sure you want to delete this image?" },class:"submit" %>
