@@ -1,19 +1,32 @@
 <!--This is the main welcome page of our Picture application.-->
+<div id="welcome-page">
 
-<h1>Upload an Image</h1>
+<div  class="box blurred-bg tinted">
+  <div class="content">
 
-<%= form_for @user, url: upload_image_path, html: { multipart: true, data: { turbo: "true" } } do |f| %>
-  <!-- Label for selecting an image to upload -->
-  <%= f.label :image, "Select an image to upload.(JPG, JPEG, GIF, or PNG only and less than 20.megabyte)" %>
-  <!-- File input to upload the image -->
-  <%= f.file_field :image %>
-  <!-- Submit button -->
-  <%= f.submit "Upload Image" %>
-  <!-- Rendering Flash Messages -->
-  <% flash.each do |type, message| %>
-    <div class="flash <%= type %>"><%= message %></div>
-  <% end %>
-<% end %>
+    <!-- welcome and definition headers -->
+    <h1>Willkommen bei Picture </h1>
+    <h2>By <a href="https://github.com/HIJAZI9" rel="github" target="_blank">Mohammed Hijazi</a></h2>
+    <h1>Image processing Web-App</h1>
+
+    <%= form_for @user, url: upload_image_path, html: { multipart: true, data: { turbo: "true" } } do |f| %>
+      <!-- Label for selecting an image to upload -->
+      <%= f.label :image,"Select an image to upload." %>
+      <p>(JPG, JPEG, GIF, or PNG only and less than 20.megabyte)</p>
+      <!-- File input to upload the image -->
+      <%= f.file_field :image ,class:"form-field"%>
+      <hr>
+      <!-- Submit button -->
+      <%= f.submit "Upload Image",class:"submit" %>
+      <!-- Rendering Flash Messages -->
+      <% flash.each do |type, message| %>
+        <div class="flash <%= type %>"><%= message %></div>
+      <% end %>
+    <% end %>
+
+  </div>
+</div>
+</div>
 
 
 

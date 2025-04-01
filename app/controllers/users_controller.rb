@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to root_path, notice: 'User was successfully deleted.' }
+      format.html { redirect_to root_path, notice: 'Please Select an image again' }
       format.json { head :no_content }
     end
   end

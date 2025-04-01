@@ -1,22 +1,27 @@
+<div class="container">
 
-<h1>Your Uploaded Image</h1>
+  <h1 class="sen_parent_1">Your Uploaded Image</h1>
 
-<% if @user.image.present? %>
-  <p>Here is your uploaded image:</p>
+  <% if @user.image.present? %>
+    <p class="sen-child">Here is your uploaded image (colored version):</p>
+    <!-- Display the resized_image version -->
+    <div><%= image_tag @user.image.url(:thumb), alt: "Display resized image" %></div>
 
-  <!-- Display the resized_image version -->
-  <div><%= image_tag @user.image.url(:thumb), alt: "Display resized image" %></div>
-  <!-- Display the Black and White image version -->
-  <div><%= image_tag @user.image.url(:black_and_white), alt: "Black and White Image" %></div>
-  <!-- Display the Histogram of Black and White image version -->
-  <h2>Histogram of Black and White Image</h2>
-  <div style="height: 50%; width: 50%;"><canvas id="histogramChart" data-histogram="<%=  @histogram_data.to_json %>"></canvas>
-  </div>
+    <p class="sen-child">Here is an Black and White image version:</p>
+    <!-- Display the Black and White image version -->
+    <div><%= image_tag @user.image.url(:black_and_white), alt: "Black and White Image" %></div>
+    <hr class="line">
 
-  <!-- Button to delete the image and redirect to root_path -->
-  <%= form_with url: user_path(@user), method: :delete do |f| %>
-    <%= f.submit "Upload Another Image", data: { confirm: "Are you sure you want to delete this image?" } %>
+    <!-- Display the Histogram of Black and White image version -->
+    <h2 class="sen_parent_2">Histogram of Black and White Image</h2>
+    <div style="height: 50%; width: 50%;"><canvas id="histogramChart" data-histogram="<%=  @histogram_data.to_json %>"></canvas>
+    </div>
+    <hr class="line">
+    <!-- Button to delete the image and redirect to root_path -->
+    <%= form_with url: user_path(@user), method: :delete do |f| %>
+      <%= f.submit "Upload Another Image", data: { confirm: "Are you sure you want to delete this image?" },class:"submit" %>
+    <% end %>
+  <% else %>
+    <p>No image uploaded yet.</p>
   <% end %>
-<% else %>
-  <p>No image uploaded yet.</p>
-<% end %>
+</div>

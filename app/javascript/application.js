@@ -2,4 +2,5 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "app/javascript/custom/chartshow";
+import "app/javascript/custom/home_page";
 

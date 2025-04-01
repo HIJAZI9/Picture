@@ -1,0 +1,81 @@
+/*Start  CSS for show_page*/
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;             /* Centers text within the container */
+    background-color: #f0f8ff;      /* Light blue */
+    border: 3px dashed #66CDAA;     /* 3px dashed border with light green color */
+
+}
+.sen_parent_1{
+    font-size: 3rem;                /* Large font size */
+    color: #333;                    /* Dark text color */
+    text-align: center;             /* Center the text */
+    font-weight: 700;               /* Bold text */
+    letter-spacing: 2px;            /* Add space between letters */
+    text-transform: uppercase;      /* Make all letters uppercase */
+    margin-bottom: 20px;            /* Space below the header */
+    padding: 10px;                  /* Padding inside the header */
+    background: linear-gradient(90deg, #66CDAA, #ADD8E6);                   /* Gradient background */
+    border-radius: 8px;                             /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);       /* Soft shadow */
+    transition: transform 0.3s ease;                /* Smooth hover animation */
+}
+.sen_parent_2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2F4F4F;                       /* Dark Slate Gray color  */
+    text-align: center;                   /* Center the text horizontally */
+    text-transform: uppercase;            /* Make the text all uppercase */
+    letter-spacing: 2px;                  /* Add space between the letters */
+    margin: 20px 0;                       /* Add space around the heading */
+    border-bottom: 2px solid #66CDAA;     /* Add a bottom border to separate the heading visually */
+    padding-bottom: 10px;                 /* Add padding under the text to move it away from the border */
+}
+.sen-child{
+    font-size: 1.2rem;                    /* Slightly larger than normal paragraph */
+    color: #555;                          /* Softer text color */
+    text-align: center;                   /* Center the text */
+    margin-bottom: 15px;                  /* Space below the paragraph */
+    line-height: 1.6;                     /* Improve readability with good line spacing */
+    padding: 5px;                         /* Add padding inside the paragraph */
+    background-color: rgba(102, 205, 170, 0.1);      /* Light background color to match design */
+    border-left: 4px solid #66CDAA;                  /* Add a subtle left border */
+    border-radius: 4px;
+}
+.submit{
+    background-color: #66CDAA; /* Light Sea Green color */
+    color: white;              /* White text for high contrast and readability */
+    padding: 10px 20px;        /* Adds space inside the button for better clickability */
+    border: none;
+    border-radius: 5px;        /* Rounds the corners slightly for a softer appearance */
+    font-size: 16px;           /* Sets a readable font size */
+    cursor: pointer;           /* Changes cursor to pointer to indicate it's clickable */
+    transition: background-color 0.3s ease;     /* Smooth color transition effect when hovered */
+    margin-bottom: 10px;                        /* Adds space below the button to prevent it from touching other elements */
+}
+.submit:hover {
+    background-color: #5CA48E;          /* Slightly darker shade on hover */
+}
+
+.submit:active {
+    background-color: #4E907D;          /* Even darker when clicked */
+}
+.line {
+    border: none;
+    height: 2px;                        /* Set the thickness of the line */
+    background-color: #66CDAA;          /* Set a matching color for the line */
+    margin: 20px 0;                     /* Add vertical spacing before and after */
+    width: 80%;                         /* Make the line width 80% of the container */
+    border-radius: 4px;                 /* Add rounded corners to soften the line */
+    opacity: 0.7;                       /* Slight transparency for a softer look */
+}
+#histogramChart {
+    width: 100% !important;             /* Ensures it takes full width */
+    max-width: 800px;                   /* Limits max width */
+    height: 400px !important;           /* Increases the height */
+}
+/* End  CSS for show_page*/

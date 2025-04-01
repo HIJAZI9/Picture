@@ -13,9 +13,9 @@
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
     <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
 
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="icon" href="/Picture_icon_COLORS.png" type="image/png">
+    <link rel="icon" href="/Picture_icon_COLORS.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/Picture_icon_COLORS.png">
 
     <!-- Include Chart.js library from a CDN for creating charts on the page -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -23,8 +23,12 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <!-- This links to application.css -->
+    <%= stylesheet_link_tag 'application.css', "data-turbo-track": "reload" %>
+
     <%= javascript_importmap_tags %>
     <%= javascript_import_module_tag "custom/chartshow" %>
+    <%= javascript_import_module_tag "custom/home_page" %>
 
   </head>
 

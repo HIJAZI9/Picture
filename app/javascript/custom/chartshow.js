@@ -17,34 +17,33 @@ document.addEventListener("DOMContentLoaded", function () {
                 }]
             },
             options: {
+                responsive: true, // Makes the chart adjust to screen size
+                maintainAspectRatio: false, // Allows custom height & width
+                plugins: {
+                    title: {
+                        display: true,       // Show the title
+                        text: 'Histogram of Black and White Image',     // The title text
+                        position: 'bottom',  // Place the title at the bottom
+                        padding: {
+                            top: 10,         // Space between the chart and the title
+                            bottom: 0
+                        },
+                        font: {
+                            size: 10
+                        }
+                    }
+                },
                 scales: {
                     y: {
-                        beginAtZero: true
+                        beginAtZero: true,
+                        ticks: {
+                            autoSkip: true, // Skips labels when necessary
+                            maxRotation: 0, // Prevents rotation
+                            minRotation: 0  // Forces labels to stay horizontal
+                        }
                     }
                 }
             }
         });
-    }
-});
-// Chart 1
-const ctx1 = document.getElementById('chart1_1').getContext('2d');
-const chart1 = new Chart(ctx1, {
-    type: 'bar',
-    data: {
-        labels: ['January', 'February', 'March'],
-        datasets: [{
-            label: 'Sales',
-            data: [12, 19, 3],
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
     }
 });

@@ -1,0 +1,11 @@
+/* Import home_page.css */
+@import "home_page.css";
+/* Import show_page.css */
+@import "show_page.css";
+
+
+html, body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
