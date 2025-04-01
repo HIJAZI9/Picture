@@ -60,8 +60,21 @@ In this Page you will be able to Select just an image to upload. The Uploaded Im
 <img width="948" alt="display_image" src="https://github.com/user-attachments/assets/5ac5abaf-ebed-4754-b3e5-1cca4249a427" />
 </div>
 
-3- Data visualization: 
+3- Data visualization: The Black and White Image Histogram and the Color Values Scatter Diagram are displayed as charts using Chart.js.
+- Histogram of Black and White Image
+<div style="display: flex; justify-content: space-between; align-items: center;">
+<img width="941" alt="histogram_of_black_and_white_image" src="https://github.com/user-attachments/assets/6b43482e-9b30-4e58-8f28-8208cf4bba72" />
+</div>
+
+-  Scatter diagram of color values
+<div style="display: flex; justify-content: space-between; align-items: center;">
+<img width="941" alt="Scatter_diagram_of_color_values" src="https://github.com/user-attachments/assets/a12c63b4-21eb-4a26-bb25-a3ee933de4f3" />
+</div>
 
 4- User-Friendliness: 
 - At the end of the Image Processing page (show_page), the user can click on the 'Upload Another Image' button, allowing them to restart the process without reloading the page. This will take the user back to the home page, where they can upload a new image.
 - Image processing web application is Responsive and easy to use.
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+<img width="1239" alt="Upload_again_button" src="https://github.com/user-attachments/assets/97fa5a46-2d12-4f97-ad7e-90ed2d8fffbf" />
+</div>
