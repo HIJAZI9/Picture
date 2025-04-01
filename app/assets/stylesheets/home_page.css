@@ -1,6 +1,7 @@
 /* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,400,700");
-/*Start  CSS for Home Page */
+
+/* Start  CSS for Home Page */
 
 #welcome-page {
     width: 100vw;                                                           /* Full width of the viewport */
@@ -9,8 +10,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    font-family: Raleway, Open Sans, Droid Sans, Roboto, arial, sans-serif;
+    font-family: Raleway, Open Sans, Droid Sans, Roboto, Arial, sans-serif;
 }
+
+/* Blurred background */
 .blurred-bg {
     background-image: linear-gradient(to top, #66CDAA, #ADD8E6);
     background-repeat: no-repeat;
@@ -18,13 +21,16 @@
     background-attachment: fixed;
 
     &.tinted {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #66CDAA, #ADD8E6);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+        linear-gradient(to top, #66CDAA, #ADD8E6);
     }
 }
 
+/* Styling for the main content box */
 .box {
     width: 40vw;
-    height: 50vh;
+    height: auto;
+    max-width: 500px;
     left: calc(50% - 250px);
     top: 20%;
     position: absolute;
@@ -36,21 +42,27 @@
     box-sizing: border-box;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     transition: box-shadow 0.3s ease;
 
     &:active {
         cursor: move;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);         /* Darker shadow on click */
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);  /* Darker shadow on click */
     }
+
 
     .content {
         margin: auto;
+        width: 100%;
     }
 }
+
 /* Styling for headings and text */
 h1, h2, a, p {
     color: black;
     font-weight: 100;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 
     .tinted & {
         color: black;
@@ -59,10 +71,12 @@ h1, h2, a, p {
 }
 
 h2 {
-    font-size: 14px;                /* Small font size for subheadings */
+    font-size: 14px;
+    color: #333;
 }
-/* Submit Button and  File field styling */
-.submit,.form-field{
+
+/* Styling for buttons and form fields */
+.submit, .form-field {
     padding: 10px 20px;
     font-size: 1em;
     color: black;
@@ -70,11 +84,58 @@ h2 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Smooth background color change on hover */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Hover effect for Submit button and File input field */
-.submit:hover,.form-field:hover {
-    background-color: #66CDAA
+.submit:hover, .form-field:hover {
+    background-color: #66CDAA;         /* Slightly darker background on hover */
 }
-/*End  CSS for Home Page */
+
+/* End  CSS for Home Page */
+
+
+/* Responsive Media Queries */
+/* For tablet screens (width up to 768px) */
+@media screen and (max-width: 768px) {
+    .box {
+        width: 90vw;
+        padding: 15px;
+        top: 10%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .form-field, .submit {
+        font-size: 0.9rem;
+    }
+}
+
+/* For mobile screens (width up to 480px) */
+@media screen and (max-width: 480px) {
+    .box {
+        width: 95vw;
+        padding: 10px;
+        top: 5%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 0.9rem;
+    }
+
+    .form-field, .submit {
+        font-size: 0.8rem;
+    }
+}
