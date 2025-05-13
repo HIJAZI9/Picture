@@ -1,0 +1,7 @@
+test:
+  <<: *default
+  database: picture_test
+  username: postgres
+  password: 567
+  host: localhost
+  port: 5432

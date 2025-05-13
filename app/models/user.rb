@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   # Check the image size of the uploaded image
   def image_size
-    if image.size > 20.megabyte
+    if image.present? && image.size > 20.megabyte
       errors.add(:image, "should be less than 20MB")
     end
   end
