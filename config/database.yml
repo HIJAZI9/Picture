@@ -83,12 +83,15 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+production_primary: &primary_production
+  <<: *default
+  database: picture_production
+  username: picture
+  password: <%= ENV["PICTURE_DATABASE_PASSWORD"] %>
+
 production:
-  primary: &primary_production
-    <<: *default
-    database: picture_production
-    username: picture
-    password: <%= ENV["PICTURE_DATABASE_PASSWORD"] %>
+  primary:
+    <<: *primary_production
   cache:
     <<: *primary_production
     database: picture_production_cache

@@ -2,7 +2,9 @@ name: Picture Test
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - dev
   pull_request:
     branches: [ main ]
 
@@ -28,7 +30,7 @@ jobs:
       PGHOST: localhost
       PGUSER: postgres
       PGPASSWORD: 567
-      DATABASE_URL: postgres://postgres:password@localhost:5432/picture_test
+      DATABASE_URL: postgres://postgres:567@localhost:5432/picture_test
 
     steps:
       - uses: actions/checkout@v3
@@ -38,6 +40,8 @@ jobs:
         with:
           ruby-version: 3.2  # Change to your Ruby version
           bundler-cache: true
+      - name: Install ImageMagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
 
       - name: Install dependencies
         run: |
@@ -46,7 +50,6 @@ jobs:
 
       - name: Set up database
         run: |
-          cp config/database.yml.github config/database.yml
           bundle exec rails db:create db:schema:load
 
       - name: Run tests
