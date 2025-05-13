@@ -30,7 +30,7 @@ jobs:
       PGHOST: localhost
       PGUSER: postgres
       PGPASSWORD: 567
-      DATABASE_URL: postgres://postgres:password@localhost:5432/picture_test
+      DATABASE_URL: postgres://postgres:567@localhost:5432/picture_test
 
     steps:
       - uses: actions/checkout@v3
