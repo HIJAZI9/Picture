@@ -21,7 +21,6 @@ gem 'carrierwave', '~> 2.0'
 # for image manipulation in CarrierWave
 gem 'mini_magick', '~> 4.10'
 #for Image Processing
-gem 'rmagick'
 gem 'image_processing', '~> 1.2'
 gem 'image_optim'
 #

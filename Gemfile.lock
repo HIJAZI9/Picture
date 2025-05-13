@@ -217,14 +217,12 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.6-x86_64-linux-musl)
       racc (~> 1.4)
-    observer (0.1.2)
     ostruct (0.6.1)
     parallel (1.26.3)
     parser (3.3.7.3)
       ast (~> 2.4.1)
       racc
     pg (1.5.9)
-    pkg-config (1.6.0)
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
@@ -288,9 +286,6 @@ GEM
     reline (0.6.0)
       io-console (~> 0.5)
     rexml (3.4.1)
-    rmagick (6.1.1)
-      observer (~> 0.1)
-      pkg-config (~> 1.4)
     rubocop (1.75.1)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
@@ -417,7 +412,6 @@ DEPENDENCIES
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.2)
-  rmagick
   rubocop-rails-omakase
   selenium-webdriver
   solid_cable
