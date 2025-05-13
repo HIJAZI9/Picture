@@ -39,9 +39,6 @@ jobs:
           ruby-version: 3.2  # Change to your Ruby version
           bundler-cache: true
 
-      - name: Install ImageMagick
-        run: sudo apt-get install -y libmagickwand-dev
-
       - name: Install dependencies
         run: |
           gem install bundler
